@@ -1,0 +1,84 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\title{Master thesis notes}
+\date{November 2019}
+
+\begin{document}
+
+\maketitle
+
+\textbf{The overall goal is to claim some (motivated) contributions in the beginning, and then the rest of the report will be dedicated to documenting those contributions}
+
+
+\section{considerations}
+\begin{itemize}
+    \item generality vs speciality of generators, and their effect on subsequent generated execution traces/testing
+    \item should the discussions of the results of the examples be in a separate chapter, or just at the end of each example section?
+    \item it could be nice to have a section on key concepts of Coq in the appendix, that we can refer to.
+\end{itemize}
+
+\section{future work}
+\begin{itemize}
+    \item shrinking
+    \item use proper trace type
+    \item implement/derive decidable instances for common predicates about the chain/traces
+    \item 
+\end{itemize}
+
+\section{TODOs for report}
+\begin{itemize}
+    \item hyperrefs for all defined types in code snippets.
+    \item links to source code in code snippets?
+    \item maybe some discussions should be deferred to the 'discussion' chapter. For exmple the specialization vs generalisation discussion.
+    \item I want to include some statistics that QuickChick can collect from the case studies (eg. percentage of discards during testing, testing time, etc.). Where should I present the data? In the case studies chapter, or here in the evaluation?
+    \item reformulate many sentences starting with "Next"
+    \item exists x . P => ... (not biimplication)
+    \item give summarisations of the properties tested for each case study
+    \item what does "entirely" correct mean of a generator? explain further
+    \item use "conjecture" for unproven properties. Maybe relevant for congress example.
+\end{itemize}
+
+High Assurance Smart Contracts
+- Why?
+  - sensitive transactions
+  - historic attacks resulting in major losses
+  - Conclusion: need effective methods for finding bugs/vulnerabilities in smart contracts
+- Methods
+  + Contract language (type system, compiler, etc.)
+  + Model Checking
+  + formal verification
+  + But what about testing?
+
+(Property-Based) Testing as a semi-formal method
++ Dijkstra quote 
++ upsides/downsides
+
+A Brief Introduction to ConCert
++ a formalisation in Coq
++ Contract representation (coq terms, init+receive)
++ execution model
+
+A Motivating Example: ERC20 Tokens
+- The contract
+- The exploit
+- ConCert Implementation
+- How to state+test the safety properties on this contract?
+  + in particular the exploit
+  + motivates temporal properties (=> testing on *execution traces*)
+
+Overview of the Testing Framework 
+- generating "arbitrary" execution traces
+- Checkers (Testable Properties)
+
+ERC20 Tokens, Revisited
+- generators (top-down explanation)
+- safety properties
+
+
+
+	
+
+
+
+\end{document}
